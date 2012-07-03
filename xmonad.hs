@@ -1,6 +1,7 @@
 import XMonad
 import XMonad.Util.Run
 import XMonad.Util.EZConfig (additionalKeys)
+import XMonad.Util.EZConfig (removeKeys)
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ICCCMFocus
 import XMonad.Config.Gnome
@@ -40,3 +41,4 @@ main =
                                           , ((mod1Mask , xK_Left), prevScreen)
                                           , ((mod1Mask .|. shiftMask, xK_t), spawn "~/Sublime\\ Text\\ 2/sublime-text-2")
                                           ]
+                        `removeKeys` [(mod1Mask, xK_Return)]                                          
